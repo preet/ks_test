@@ -50,6 +50,8 @@ auto_test {
 
 # gl
 #SOURCES += $${PATH_KS_GL}/test/KsTestGLBuffers.cpp
+#SOURCES += $${PATH_KS_GL}/test/KsTestGLTextures.cpp
+#SOURCES += $${PATH_KS_GL}/test/KsTestGLRenderLoop.cpp
 
 # gui
 #SOURCES += $${PATH_KS_GUI}/test/KsTestGuiScreens.cpp
@@ -61,4 +63,5 @@ auto_test {
 #SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawMultiple.cpp
 #SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawUniforms.cpp
 #SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawBatched.cpp
-
+#SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawTextures.cpp
+#SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawGraphicsReset.cpp
