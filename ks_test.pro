@@ -65,3 +65,8 @@ auto_test {
 #SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawBatched.cpp
 #SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawTextures.cpp
 #SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawGraphicsReset.cpp
+#SOURCES += $${PATH_KS_DRAW}/test/KsTestDrawBounce.cpp
+
+# text
+#SOURCES += $${PATH_KS_TEXT}/test/KsTestTextAtlas.cpp
+#SOURCES += $${PATH_KS_TEXT}/test/KsTestTextLayout.cpp
