@@ -1,23 +1,28 @@
 CONFIG      -= qt
 
+KS_BUILD_INFO_CONFIG = Unknown
+KS_BUILD_INFO_PLATFORM = $$[QMAKE_XSPEC]
+KS_BUILD_INFO_SPEC = $$[QMAKE_XSPEC]
+KS_BUILD_INFO_ARCH = $${QT_ARCH}
+
 CONFIG(debug,debug|release) {
-    message("ks: Debug Build")
+    KS_BUILD_INFO_CONFIG = Debug
 }
 
 CONFIG(release,debug|release) {
-    message("ks: Release Build")
+    KS_BUILD_INFO_CONFIG = Release
 }
 
-
 android {
-    message("ks: Platform: Android")
+    KS_BUILD_INFO_PLATFORM = Android
 }
 linux {
     !android {
-        message("ks: Platform: Linux")
+        KS_BUILD_INFO_PLATFORM = Linux
     }
 }
 
+message("ks: Build Info: $${KS_BUILD_INFO_PLATFORM}, $${KS_BUILD_INFO_SPEC}, $${KS_BUILD_INFO_ARCH}, $${KS_BUILD_INFO_CONFIG}")
 
 #ks_core
 include($${PATH_KS}/ks_core/ks_core.pri)
@@ -39,3 +44,6 @@ include($${PATH_KS}/ks_platform/ks_platform.pri)
 
 #ks_shared
 include($${PATH_KS}/ks_shared/ks_shared.pri)
+
+#ks_text
+include($${PATH_KS}/ks_text/ks_text.pri)
